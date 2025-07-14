@@ -7,8 +7,9 @@ import PropertyOverview from "./PropertyOverview";
 import PropertyDetails from "./PropertyDetails";
 import PropertyLocation from "./PropertyLocationn";
 import ContactWidget from "./ContactWidget";
+import ApplicationModal from "./ApplicationModal";
 
-const page = () => {
+const Page = () => {
   const { id } = useParams();
   const propertyId = Number(id);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,15 +30,15 @@ const page = () => {
           <ContactWidget onOpenModal={() => setIsModalOpen(true)} />
         </div>
       </div>
-      {/* {authUser && (
+      {authUser && (
         <ApplicationModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           propertyId={propertyId}
         />
-      )} */}
+      )}
     </div>
   );
 };
 
-export default page;
+export default Page;

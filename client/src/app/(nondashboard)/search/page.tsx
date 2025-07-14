@@ -10,7 +10,7 @@ import { setFilters } from "@/state";
 import Map from "./Map";
 import Listings from "./Listings";
 
-const page = () => {
+const Page = () => {
   const searchParams = useSearchParams();
   const dispatch = useAppDispatch();
   const isFiltersFullOpen = useAppSelector(
@@ -61,4 +61,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

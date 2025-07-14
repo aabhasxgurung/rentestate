@@ -9,7 +9,7 @@ import {
 } from "@/state/api";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   const { data: authUser } = useGetAuthUserQuery();
   const { data: tenant } = useGetTenantQuery(
     authUser?.cognitoInfo?.userId || "",
@@ -55,4 +55,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

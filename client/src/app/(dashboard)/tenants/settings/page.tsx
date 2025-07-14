@@ -6,7 +6,7 @@ import {
 } from "@/state/api";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   const { data: authUser, isLoading } = useGetAuthUserQuery();
   const [updateTenant] = useUpdateTenantSettingsMutation();
 
@@ -34,4 +34,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
